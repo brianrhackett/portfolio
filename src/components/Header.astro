@@ -1,16 +1,16 @@
 ---
 const navItems = [
 	{ label: 'Work', href: '/#work' },
-	{ label: 'Projects', href: '/projects' },
+	{ label: 'About', href: '/about' },
 	{ label: 'Resume', href: '/documents/BrianHackett.pdf' },
 ]
 ---
 
-<header class="border-b border-taupe-300 bg-taupe-100">
+<header class="border-b border-taupe-300 bg-taupe-100 fixed w-full">
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 		<a
 			href="/"
-			class="font-serif text-xl font-bold text-mist-950"
+			class="font-serif text-xl font-bold text-mist-900"
 		>
 			Brian Hackett
 		</a>
@@ -22,8 +22,8 @@ const navItems = [
 					class:list={[
 						'rounded-full px-5 py-2 text-sm font-medium transition',
 						index === 0
-							? 'bg-mist-950 text-taupe-100'
-							: 'text-mist-600 hover:text-mist-950'
+							? 'bg-mist-900 text-taupe-100'
+							: 'text-mist-500 hover:text-mist-900'
 					]}
 				>
 					{item.label}

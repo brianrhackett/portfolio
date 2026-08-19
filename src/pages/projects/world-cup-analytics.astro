@@ -1,0 +1,298 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+	title="World Cup Analytics"
+	description="An interactive application for exploring tournaments, teams, matches, and trends throughout World Cup history."
+>
+	<section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
+		<div class="max-w-4xl">
+			<p class="text-xs font-semibold uppercase tracking-[0.14em] text-orange-700">
+				Data & Analytics Platform · 2026
+			</p>
+
+			<h1 class="mt-5 font-serif text-6xl leading-none tracking-tight text-mist-900 lg:text-8xl">
+				World Cup Analytics
+			</h1>
+
+			<p class="mt-8 max-w-3xl font-serif text-2xl italic leading-relaxed text-mist-500 lg:text-3xl">
+				Nearly a century of World Cup history, explored.
+			</p>
+
+			<p class="mt-8 max-w-3xl text-lg leading-8 text-mist-700">
+				An interactive data application for exploring tournaments, teams,
+				matches, and historical trends across the history of the FIFA World Cup.
+			</p>
+
+			<div class="mt-8 flex flex-wrap gap-3 text-sm text-mist-500">
+				<span>Python</span>
+				<span aria-hidden="true">·</span>
+				<span>FastAPI</span>
+				<span aria-hidden="true">·</span>
+				<span>PostgreSQL</span>
+				<span aria-hidden="true">·</span>
+				<span>Vue 3</span>
+				<span aria-hidden="true">·</span>
+				<span>Tailwind CSS</span>
+				<span aria-hidden="true">·</span>
+				<span>Chart.js</span>
+			</div>
+
+			<div class="mt-10 flex flex-wrap gap-4">
+				<a
+					href="https://worldcup.brianrhackett.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="rounded-full bg-taupe-900 px-6 py-3 text-sm font-semibold text-mist-100 transition hover:bg-taupe-800"
+				>
+					View live ↗
+				</a>
+
+				<a
+					href="https://github.com/brianrhackett/world-cup-analytics"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="rounded-full border border-mist-900 px-6 py-3 text-sm font-semibold text-mist-900 transition hover:bg-taupe-900 hover:text-mist-100"
+				>
+					GitHub ↗
+				</a>
+			</div>
+		</div>
+
+		<div class="mt-16 overflow-hidden rounded-xl border border-taupe-300">
+			<img
+				src="/images/projects/worldcup-dashboard.png"
+				alt="World Cup Analytics dashboard showing tournament statistics and historical charts"
+				class="block h-auto w-full"
+			/>
+		</div>
+	</section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                The Project
+                <span 
+                    class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg"
+                >
+                    Turning World Cup history into something explorable.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    World Cup Analytics began with historical match and tournament data and a simple idea: 
+                    turn that data into an application that makes nearly a century of World Cup history easier to explore.
+                </p>
+                <p class="my-6">
+                    Building it meant more than creating charts. The raw data had to be organized into a relational model, 
+                    historical inconsistencies had to be accounted for, and the backend needed to support filtering and 
+                    aggregation across more than a thousand matches.
+                </p>
+                <p class="my-6">
+                    The finished application combines a FastAPI backend and PostgreSQL database with a Vue interface for 
+                    exploring tournaments, teams, individual matches, and broader trends throughout World Cup history.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24 text-lg lg:text-xl">
+        <h2 class="text-3xl md:text-6xl font-serif lg:ml-[60%] uppercase">
+            Digging in
+            <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                Making sense of the data.
+            </span>
+        </h2>
+        <div class="mr:ml-[25%] lg:mr-[40%]">
+            <p class="my-6">
+                The source data looked simple at first—teams, tournaments, matches—but historical soccer data gets messy quickly. 
+                Country names change, teams disappear, records are inherited, and the same team can appear under multiple names 
+                across different eras.
+            </p>
+            <p class="my-6">
+                Germany was the clearest example. West Germany is generally treated as part of Germany’s historical record, 
+                so storing every team name as a separate entity would have made historical comparisons misleading. 
+                I handled that by separating canonical teams from the names used in individual match records.
+            </p>
+            <p class="my-6">
+                Match records link to canonical team IDs rather than relying only on team-name strings. Aliases preserve the 
+                historical names that appeared in the source data while still allowing statistics to roll up 
+                to the correct modern team.
+            </p>
+            <p class="my-6">
+                Tournaments, teams, and matches were normalized into separate tables so the API could filter, aggregate, 
+                and compare data without repeatedly parsing text values. That structure became the foundation for everything 
+                else in the application, from team histories to tournament summaries and match filtering.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                Showcasing The Data
+                <span 
+                    class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg"
+                >
+                    From 1930 to 2026.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    The fun part of digging through nearly a century of data is getting to display it in an interesting way.
+                    From bar charts to line graphs to pie charts to sorted tables, each view offers a different way 
+                    to uncover the stories hidden in the numbers.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg-gap-10 mt-20">
+                <div>
+                    <img
+                        src='/images/projects/worldcup-tournaments_page.png'
+                        alt="World Cup Analytics Tournaments Page"
+                        class="h-80 w-full"
+                    />
+                    <p class="my-6 text-sm px-6 text-center">
+                        A timeline of every World Cup Tournament ever played, with the selected year's details displayed.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        src='/images/projects/worldcup-teams_page.png'
+                        alt="World Cup Analytics Teams Page"
+                        class="h-80 w-full"
+                    />
+                    <p class="my-6 text-sm px-6 text-center">
+                        Search through every country that's ever participated and see various facts about them.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        src='/images/projects/worldcup-matches_page.png'
+                        alt="World Cup Analytics Matches Page"
+                        class="h-80 w-full"
+                    />
+                    <p class="my-6 text-sm px-6 text-center">
+                        Every match ever played, filterable.
+                    </p>
+                </div>
+                <div>
+                    <img
+                        src='/images/projects/worldcup-statistics_page.png'
+                        alt="World Cup Analytics Statistics Page"
+                        class="h-80 w-full"
+                    />
+                    <p class="my-6 text-sm px-6 text-center">
+                        Various charts displaying interesting data like the most common scoreline.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24 text-lg lg:text-xl">
+        <h2 class="text-3xl md:text-6xl font-serif lg:ml-[60%] uppercase mb-12">
+            Under The Hood
+            <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                Built with Laravel. Designed like a real application.
+            </span>
+        </h2>
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 md:grid-cols-2">
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Python + FastAPI
+                </h3>
+                <p class="mt-6 text-lg">
+                    A REST API built with FastAPI handles data retrieval, filtering, aggregation, 
+                    and the connection between the database and front end.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    PostGreSQL
+                </h3>
+                <p class="mt-6 text-lg">
+                    Relational data model for tournaments, teams, aliases, and more than a thousand 
+                    historical World Cup matches.
+                 </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Vue 3
+                </h3>
+                <p class="mt-6 text-lg">
+                    A component-based interface for navigating tournaments, exploring teams, filtering matches, 
+                    and presenting statistics.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Server-Side Filtering
+                </h3>
+                <p class="mt-6 text-lg">
+                    Match filtering and pagination happen through the API, keeping the interface responsive 
+                    without loading the entire dataset into the browser.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Chart.js
+                </h3>
+                <p class="mt-6 text-lg">
+                    Historical data is transformed into interactive charts for comparing teams, tournaments,
+                    goals, and trends over time.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Vite + Tailwind
+                </h3>
+                <p class="mt-6 text-lg">
+                    Tailwind handles the interface design while Vite provides the front-end development and build tooling.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                Building World Cup Analytics
+                <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                    A familiar subject. A different stack.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    I've spent most of my career as a PHP developer, so I used this project as an
+                    opportunity to step outside my usual stack and build something in Python. I had
+                    some experience with the language going in, but building a complete application
+                    with FastAPI gave me a much deeper understanding of Python and its ecosystem.
+                </p>
+                <p class="my-6">
+                    The World Cup has always been one of my favorite sporting events, so it was an
+		            easy subject to stay curious about. Working with nearly a century of matches gave
+		            me plenty of opportunities to ask questions of the data, figure out how to model
+		            it, and find interesting ways to present what I found.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-100">
+        <div class="mx-auto flex max-w-7xl justify-start px-6 py-20 lg:px-10 lg:py-24">
+            <div class="w-full max-w-sm text-right">
+                <p class="font-serif text-3xl italic text-mist-500">
+                    Previous Project
+                </p>
+
+                <a
+                    href="/projects/agencyos"
+                    class="mt-5 inline-block text-lg font-medium text-orange-700 transition hover:text-orange-800"
+                >
+                &larr; AgencyOS
+                </a>
+            </div>
+        </div>
+    </section>
+</ProjectLayout>
