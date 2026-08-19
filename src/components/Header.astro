@@ -1,0 +1,41 @@
+---
+const navItems = [
+	{ label: 'Work', href: '/#work' },
+	{ label: 'Projects', href: '/projects' },
+	{ label: 'Resume', href: '/documents/BrianHackett.pdf' },
+]
+---
+
+<header class="border-b border-taupe-300 bg-taupe-100">
+	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+		<a
+			href="/"
+			class="font-serif text-xl font-bold text-mist-950"
+		>
+			Brian Hackett
+		</a>
+
+		<nav class="hidden items-center gap-3 md:flex" aria-label="Primary navigation">
+			{navItems.map((item, index) => (
+				<a
+					href={item.href}
+					class:list={[
+						'rounded-full px-5 py-2 text-sm font-medium transition',
+						index === 0
+							? 'bg-mist-950 text-taupe-100'
+							: 'text-mist-600 hover:text-mist-950'
+					]}
+				>
+					{item.label}
+				</a>
+			))}
+		</nav>
+
+		<a
+			href="mailto:hackettbrianr@gmail.com"
+			class="rounded-full bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-800"
+		>
+			Say hello
+		</a>
+	</div>
+</header>

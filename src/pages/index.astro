@@ -1,17 +1,49 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
+import MoreWork from '../components/MoreWork.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<section class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+		<p class="text-sm font-semibold uppercase tracking-widest text-mist-600">
+			Full-Stack Web Developer
+		</p>
+
+		<h1 class="mt-6 max-w-5xl font-serif text-2xl leading-tight text-mist-950 lg:text-4xl">
+			I build modern web applications with PHP, Laravel, 
+			JavaScript, and modern front-end tools.
+		</h1>
+	</section>
+	<section
+		id="work"
+		class="mx-auto max-w-7xl px-6 py-0 lg:px-10">
+
+		<FeaturedProject
+			title="AgencyOS"
+			eyebrow="Agency Management Platform ⋅ 2026"
+			tagline="One workspace for projects, people, and clients."
+			description="A full-stack agency management platform built around real-world access control. Agency teams and clients get tailored access to projects, tasks, milestones, files, and team members based on their roles and assignments."
+			image="/images/agencyos-screenshot.png"
+			imageAlt="AgencyOS dashboard showing project, task, client, and milestone information"
+			href="http://agencyos.brianrhackett.com"
+			number="01"
+		/>
+
+		<FeaturedProject
+			title="World Cup Analytics"
+			eyebrow="Data & Analytics Platform · 2026"
+			tagline="Nearly a century of World Cup history, explored."
+			description="Tournament, match, and team data for every World Cup ever played broken down into charts, graphs, and tables."
+			image="/images/worldcup-screenshot.png"
+			imageAlt="World Cup Analytics dashboard"
+			href="http://worldcup.brianrhackett.com"
+			number="02"
+			reverse
+		/>
+	</section>
+	<section class="bg-mist-950 text-taupe-100">
+		<MoreWork />
+	</section>
+
+</Layout>
