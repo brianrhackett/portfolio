@@ -1,9 +1,23 @@
 ---
+const pathname = Astro.url.pathname;
+
 const navItems = [
-	{ label: 'Work', href: '/#work' },
-	{ label: 'About', href: '/about' },
-	{ label: 'Resume', href: '/resume' },
-]
+	{
+		label: 'Work',
+		href: '/#work',
+		active: pathname === '/' || pathname.startsWith('/projects/')
+	},
+	{
+		label: 'About',
+		href: '/about',
+		active: pathname.startsWith('/about')
+	},
+	{
+		label: 'Resume',
+		href: '/documents/resume.pdf',
+		active: false
+	}
+];
 ---
 
 <header class="border-b border-taupe-300 bg-taupe-100">
@@ -21,10 +35,11 @@ const navItems = [
 					href={item.href}
 					class:list={[
 						'rounded-full px-5 py-2 text-sm font-medium transition',
-						index === 0
+						item.active
 							? 'bg-taupe-900 text-mist-100'
 							: 'text-mist-500 hover:text-mist-900'
 					]}
+					aria-current={item.active ? 'page' : undefined}
 				>
 					{item.label}
 				</a>
@@ -72,7 +87,12 @@ const navItems = [
 			{navItems.map((item) => (
 				<a
 					href={item.href}
-					class="rounded-sm px-3 py-3 text-base font-medium text-mist-700 transition hover:bg-taupe-200 hover:text-mist-900"
+					class:list={[
+						'rounded-full px-5 py-2 text-sm font-medium transition',
+						item.active
+							? 'bg-taupe-900 text-mist-100'
+							: 'text-mist-500 hover:text-mist-900'
+					]}
 				>
 					{item.label}
 				</a>
