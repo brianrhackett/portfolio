@@ -106,7 +106,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
                 to invite members of their client organizations to help manage and contribute to tasks, if they are so inclined.
             </p>
         </div>
-        <div class="grid gap-6 lg:gap-10 grid-cols-2 my-20">
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 md-gridcols-2 my-20">
             <div>
                 <img
                     src='/images/projects/agencyos-agency_user_clients_page.png'
@@ -153,7 +153,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
                     Tasks can also be managed visually from the board, with a classic kanban style drag and drop interface.
                 </p>
             </div>
-            <div class="grid gap-6 lg:gap-10 grid-cols-2 mt-10">
+            <div class="grid gap-6 lg:gap-10 grid-cols-1 md:grid-cols-2 mt-10">
                 <div>
                     <img 
                         src='/images/projects/agencyos-project_page.png'
@@ -174,15 +174,15 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
                         Assignments, comments, files, status and deadlines.
                     </div>
                 </div>
-                <div class="col-span-2">
-                    <div class="text-center text-sm text-orange-700 mb-2">
-                        <div class="uppercase">Kanban Board</div>
-                        Move work through each stage visually.
-                    </div>
+                <div class="md:col-span-2">
                     <img 
                         src='/images/projects/agencyos-project_board_page.png'
                         alt="A view of a single project page, in board view"
                     />
+                    <div class="text-center text-sm text-orange-700 mt-2">
+                        <div class="uppercase">Kanban Board</div>
+                        Move work through each stage visually.
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,7 +274,7 @@ import ProjectLayout from '../../layouts/ProjectLayout.astro';
 
     <section class="bg-taupe-100">
         <div class="mx-auto flex max-w-7xl justify-end px-6 py-20 lg:px-10 lg:py-24">
-            <div class="w-full max-w-sm">
+            <div class="w-full max-w-sm text-right sm:text-left">
                 <p class="font-serif text-3xl italic text-mist-500">
                     Next Project
                 </p>
