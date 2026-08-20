@@ -2,15 +2,15 @@
 const navItems = [
 	{ label: 'Work', href: '/#work' },
 	{ label: 'About', href: '/about' },
-	{ label: 'Resume', href: '/documents/BrianHackett.pdf' },
+	{ label: 'Resume', href: '/resume' },
 ]
 ---
 
-<header class="border-b border-taupe-300 bg-taupe-100 fixed w-full">
+<header class="border-b border-taupe-300 bg-taupe-100">
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 		<a
 			href="/"
-			class="font-serif text-xl font-bold text-mist-900"
+			class="font-serif text-xl font-bold tracking-tight text-mist-900"
 		>
 			Brian Hackett
 		</a>
@@ -22,7 +22,7 @@ const navItems = [
 					class:list={[
 						'rounded-full px-5 py-2 text-sm font-medium transition',
 						index === 0
-							? 'bg-mist-900 text-taupe-100'
+							? 'bg-taupe-900 text-mist-100'
 							: 'text-mist-500 hover:text-mist-900'
 					]}
 				>
@@ -31,11 +31,71 @@ const navItems = [
 			))}
 		</nav>
 
-		<a
-			href="mailto:hackettbrianr@gmail.com"
-			class="rounded-full bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-800"
-		>
-			Say hello
-		</a>
+		<div class="flex items-center gap-3">
+			<a
+				href="mailto:hackettbrianr@gmail.com"
+				class="hidden rounded-full bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-800 md:inline-flex"
+			>
+				Say hello
+			</a>
+
+			<button
+				id="mobile-menu-button"
+				type="button"
+				class="inline-flex size-10 items-center justify-center rounded-full border border-taupe-300 text-mist-900 md:hidden"
+				aria-label="Open navigation"
+				aria-expanded="false"
+				aria-controls="mobile-menu"
+			>
+				<svg
+					class="size-5"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+				>
+					<path d="M4 7h16" />
+					<path d="M4 12h16" />
+					<path d="M4 17h16" />
+				</svg>
+			</button>
+		</div>
 	</div>
+
+	<nav
+		id="mobile-menu"
+		class="hidden border-t border-taupe-300 px-6 py-5 md:hidden"
+		aria-label="Mobile navigation"
+	>
+		<div class="flex flex-col gap-2">
+			{navItems.map((item) => (
+				<a
+					href={item.href}
+					class="rounded-sm px-3 py-3 text-base font-medium text-mist-700 transition hover:bg-taupe-200 hover:text-mist-900"
+				>
+					{item.label}
+				</a>
+			))}
+
+			<a
+				href="mailto:hackettbrianr@gmail.com"
+				class="mt-2 rounded-sm bg-orange-700 px-3 py-3 text-center text-sm font-semibold text-white"
+			>
+				Say hello
+			</a>
+		</div>
+	</nav>
+
+	<script>
+		const button = document.getElementById('mobile-menu-button')
+		const menu = document.getElementById('mobile-menu')
+
+		button?.addEventListener('click', () => {
+			const isOpen = !menu?.classList.contains('hidden')
+
+			menu?.classList.toggle('hidden')
+			button.setAttribute('aria-expanded', String(!isOpen))
+		})
+	</script>
 </header>
