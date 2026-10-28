@@ -1,0 +1,414 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+
+<ProjectLayout
+	title="Chalk & Table"
+	description="A full-stack pool league management platform built to handle the complexities of running a real league."
+>
+<section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
+		<div class="max-w-4xl">
+			<p class="text-xs font-semibold uppercase tracking-[0.14em] text-orange-700">
+				POOL LEAGUE MANAGEMENT PLATFORM · 2026
+			</p>
+
+			<h1 class="mt-5 font-serif text-6xl leading-none tracking-tight text-mist-950 lg:text-8xl">
+				Chalk & Table
+			</h1>
+
+			<p class="mt-8 max-w-3xl font-serif text-2xl italic leading-relaxed text-mist-600 lg:text-3xl">
+				From opening break to the championship match.
+			</p>
+
+			<p class="mt-8 max-w-3xl text-lg leading-8 text-mist-700">
+				A full-stack pool league management platform built to handle the complexities of running a real league: 
+                teams, seasons, scheduling, player rosters, match results, standings, and playoffs.
+			</p>
+
+			<div class="mt-8 flex flex-wrap gap-3 text-sm text-mist-600">
+				<span>Next.js</span>
+				<span aria-hidden="true">·</span>
+				<span>TypeScript</span>
+				<span aria-hidden="true">·</span>
+				<span>PostgreSQL</span>
+				<span aria-hidden="true">·</span>
+				<span>Tailwind CSS</span>
+				<span aria-hidden="true">·</span>
+				<span>AWS</span>
+			</div>
+
+			<div class="mt-10 flex flex-wrap gap-4">
+				<a
+					href="https://chalkandtable.brianrhackett.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="rounded-full bg-mist-950 px-6 py-3 text-sm font-semibold text-taupe-100 transition hover:bg-mist-800"
+				>
+					View live ↗
+				</a>
+
+				<a
+					href="https://github.com/brianrhackett/chalkandtable"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="rounded-full border border-mist-800 px-6 py-3 text-sm font-semibold text-mist-950 transition hover:bg-mist-950 hover:text-taupe-100"
+				>
+					GitHub ↗
+				</a>
+			</div>
+		</div>
+
+		<div class="mt-16 overflow-hidden rounded-xl border border-taupe-300">
+			<img
+				src="/images/projects/ct-league_dashboard.png"
+				alt="AgencyOS dashboard showing projects, tasks, milestones, and agency activity"
+				class="block h-auto w-full"
+			/>
+		</div>
+	</section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                The Project
+                <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                    Built around the way real pool leagues work.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    Chalk & Table began with a simple idea: build a league management platform that 
+                    reflects how local pool leagues actually operate.
+                </p>
+                <p class="my-6">
+                    As a member of a local pool league, I was familiar with the challenges of organizing teams, 
+                    managing schedules, tracking results, and keeping standings up to date. 
+                    What seemed like a straightforward application quickly revealed a surprising amount of complexity.
+                </p>
+                <p class="my-6">
+                    Teams share venues, schedules need to account for holidays and other conflicts, 
+                    seasons follow different formats, and playoff structures introduce their own rules. 
+                    Rather than building around a rigid set of assumptions, I wanted to create something flexible 
+                    enough to accommodate different leagues.
+                </p>
+                <p class="my-6">
+                    The result is a full-stack application that brings league administration, scheduling, team rosters, 
+                    match results, player statistics, standings, and playoffs together in one place.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24 text-lg lg:text-xl">
+        <h2 class="text-3xl md:text-6xl font-serif lg:ml-[60%] uppercase">
+            League Management
+            <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                Every team, every season, all in one place.
+            </span>
+        </h2>
+        <div class="mr:ml-[25%] lg:mr-[40%]">
+            <p class="my-6">
+                Chalk &amp; Table organizes each league into seasons, allowing administrators to manage teams, 
+                venues, and player rosters while preserving results from previous years.
+            </p>
+            <p class="my-6">
+                Teams can be assigned to shared venues, players can be added to seasonal rosters, and captains 
+                can be designated to help manage their teams. Each season maintains its own schedule, 
+                standings, and results, providing a complete picture of league activity.
+            </p>
+            <p class="my-6">
+                Standings are calculated automatically from completed matches, tracking wins, losses, 
+                and rack percentages to give teams an up-to-date view of their performance throughout the season.
+            </p>
+        </div>
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 md-gridcols-2 my-20">
+            <div>
+                <img
+                    src='/images/projects/ct-rosters_section.png'
+                    alt="roster section of team page"
+                    class="w-full"
+                />
+                <p class="my-6 text-sm px-6 text-center">
+                    Teams can opt-in to keep track of individual rack statistics throughout a season. This will keep track
+                    of each player's individual win/loss record.
+                </p>
+            </div>
+            <div>
+                <img
+                    src='/images/projects/ct-standings.png'
+                    alt="Standings page"
+                    class="w-full"
+                />
+                <p class="my-6 text-sm px-6 text-center">
+                    Standings are calculated automatically based on match results. Tiebreakers are built-in which include 
+                    head-to-head records and total racks won, as well as a "mini league table" calculation when more than
+                    two teams are tied.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                Scheduling
+                <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                    More than just putting dates on a calendar.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    Generating a league schedule involves more than pairing teams together. 
+                    Matches need to be distributed fairly, home and away assignments need to be balanced, 
+                    and teams sharing the same venue can't be scheduled at home simultaneously.
+                </p>
+                <p class="my-6">
+                    Chalk & Table includes a schedule generator that handles round-robin competition 
+                    while accounting for these constraints. Administrators can choose the day of the week, 
+                    exclude holidays or other unavailable dates, and select the season's scheduling format.
+                </p>
+                <p class="my-6">
+                    Before committing anything to the database, the generated schedule can be previewed 
+                    and reviewed. For leagues with an existing schedule, a CSV import option provides an 
+                    alternative to automatic generation.
+                </p>
+            </div>
+            <div class="grid gap-6 lg:gap-10 grid-cols-1 md:grid-cols-2 mt-10">
+                <div>
+                    <img 
+                        src='/images/projects/ct-schedule_format.png'
+                        alt="Options for format of schedule"
+                    />
+                    <div class="text-center text-sm text-orange-700 mt-2">
+                        <div class="uppercase">Schedule Format</div>
+                        Choose between single round-robin, home-and-away, or a fixed number of weeks.
+                    </div>
+                </div>
+                <div>
+                    <img 
+                        src='/images/projects/ct-schedule_options.png'
+                        alt="View of all options chosen"
+                    />
+                    <div class="text-center text-sm text-orange-700 mt-2">
+                        <div class="uppercase">Schedule Confirmation</div>
+                        Review scheduling options before generating and approving the final schedule.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24 text-lg lg:text-xl">
+        <h2 class="text-3xl md:text-6xl font-serif lg:ml-[60%] uppercase mb-12">
+            Match Management
+            <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                From the opening break to the final rack.
+            </span>
+        </h2>
+        <div class="md:ml-[25%] lg:ml-[40%]">
+            <p class="my-6">
+                Chalk & Table provides a dedicated match page where teams can manage lineups, record results, 
+                and track individual player performance throughout the season.
+            </p>
+            <p class="my-6">
+                Team captains can select players from their seasonal rosters to build match lineups, 
+                while authorized users can enter final scores and record rack-by-rack results. 
+                Completed matches are locked to prevent accidental changes to recorded results.
+            </p>
+            <p class="my-6">
+                For leagues that enable individual player statistics, rack results are used to calculate each 
+                player's wins and losses automatically. This allows leagues to track individual performance 
+                without requiring a separate scorekeeping system.
+            </p>
+            <p class="my-6">
+                Match results also feed directly into the league standings, keeping team records and rankings 
+                up to date as the season progresses.
+            </p>
+        </div>
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 md:grid-cols-2 mt-10">
+            <div>
+                <img 
+                    src='/images/projects/ct-weekly_schedule.png'
+                    alt="Weekly schedule overview"
+                />
+                <div class="text-center text-sm text-orange-700 mt-2">
+                    <div class="uppercase">Weekly Schedules</div>
+                    Schedule page is broken down by weeks.
+                </div>
+            </div>
+            <div>
+                <img 
+                    src='/images/projects/ct-add_score.png'
+                    alt="View of score editing"
+                />
+                <div class="text-center text-sm text-orange-700 mt-2">
+                    <div class="uppercase">Score Entering</div>
+                    A simple modal interface for entering match scores.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                Playoffs
+                <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                    The road to the championship.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    The regular season is only part of the story. Chalk & Table also supports configurable
+                    playoff tournaments, allowing leagues to define their postseason structure rather than 
+                    being locked into a single format.
+                </p>
+                <p class="my-6">
+                    Administrators can configure playoff rounds, determine how many teams qualify, and 
+                    establish the number of matches required to win each series. The system supports different 
+                    formats for each round, including best-of-three and best-of-five series.
+                </p>
+                <p class="my-6">
+                    As results are recorded, teams advance through the tournament bracket, with support for 
+                    reseeding between rounds. The bracket provides a clear view of each matchup, series results, 
+                    and the path to the championship.
+                </p>
+                <p class="my-6">
+                    By integrating playoffs with the existing teams, rosters, and match management system, 
+                    Chalk & Table keeps the postseason connected to the rest of the league.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 mt-10">
+                <div>
+                    <img 
+                        src='/images/projects/ct-playoffs.png'
+                        alt="Playoff bracket with champion"
+                    />
+                    <div class="text-center text-sm text-orange-700 mt-2">
+                        <div class="uppercase">Playoff Bracket</div>
+                        Complete playoff bracket with championship call-out.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24 text-lg lg:text-xl">
+        <h2 class="text-3xl md:text-6xl font-serif lg:ml-[60%] uppercase mb-12">
+            Under The Hood
+            <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                Built with Next.js. Designed for the complexities of real league management.
+            </span>
+        </h2>
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 md:grid-cols-2">
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Next.js + React
+                </h3>
+                <p class="mt-6 text-lg">
+                    Full-stack application built with Next.js 16, React, and TypeScript, using 
+                    server components, server actions, and interactive client components.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    PostGreSQL + Prisma
+                </h3>
+                <p class="mt-6 text-lg">
+                    Relational database modeling leagues, seasons, teams, venues, players, matches, 
+                    individual rack results, and playoff series, managed through Prisma ORM.
+                 </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Authentication &amp; Authorization
+                </h3>
+                <p class="mt-6 text-lg">
+                    Auth.js handles user authentication, while league memberships and role-based 
+                    permissions control access to administrative features, team management, and scorekeeping.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Scheduling &amp; Tournament Logic
+                </h3>
+                <p class="mt-6 text-lg">
+                    Custom round-robin scheduling algorithms account for shared venues, home-and-away 
+                    assignments, and excluded dates. Configurable playoff structures manage tournament 
+                    series and progression.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    Tailwind CSS
+                </h3>
+                <p class="mt-6 text-lg">
+                    Responsive interfaces built with Tailwind CSS, including customizable league themes, 
+                    interactive scheduling tools, match scorekeeping, and tournament brackets.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-sm text-mist-600 tracking uppercase">
+                    AWS + Nginx
+                </h3>
+                <p class="mt-6 text-lg">
+                    Deployed on Amazon EC2 with Nginx, PostgreSQL, and PM2 managing the production Next.js application.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-900 text-mist-100 pb-20 pt-16 lg:pb-28 lg:pt-24">
+        <div class="text-lg lg:text-xl mx-auto max-w-7xl px-6 lg:px-10">
+            <h2 class="text-3xl md:text-6xl font-serif lg:mr-[60%] uppercase">
+                Building Chalk & Table
+                <span class="text-orange-700 normal-case block font-sans mt-6 text-sm md:text-lg">
+                    What started as a league manager became something much bigger.
+                </span>
+            </h2>
+            <div class="md:ml-[25%] lg:ml-[40%]">
+                <p class="my-6">
+                    Chalk & Table began as an opportunity to build a practical application around 
+                    something I already knew well. Having played in a local pool league, I understood how the league operated, 
+                    but translating those rules and routines into software presented an entirely different set of challenges.
+                </p>
+                <p class="my-6">
+                    What initially seemed like a straightforward combination of teams, schedules, and standings 
+                    grew into a much more complex system. Supporting multiple seasons, shared venues, 
+                    configurable playoff formats, player statistics, and different levels of user access required 
+                    careful consideration of how each part of the application interacted with the others.
+                </p>
+                <p class="my-6">
+                    Some of the most rewarding challenges involved the logic behind the scenes. Building a schedule generator 
+                    that accounted for venue conflicts and balanced home-and-away assignments, designing a playoff system flexible 
+                    enough to accommodate different tournament formats, and maintaining consistent permissions across the 
+                    application all pushed me beyond simply creating pages and database records.
+                </p>
+                <p class="my-6">
+                    Developing Chalk & Table strengthened my experience with Next.js, TypeScript, relational data modeling, 
+                    and full-stack application architecture. More importantly, it reinforced the value of understanding 
+                    the problem before designing the solution, and of building software that can adapt as real-world 
+                    requirements evolve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-taupe-100">
+        <div class="mx-auto flex max-w-7xl justify-end px-6 py-20 lg:px-10 lg:py-24">
+            <div class="w-full max-w-sm text-right md:text-left">
+                <p class="font-serif text-3xl italic text-mist-500">
+                    Next Project
+                </p>
+
+                <a
+                    href="/projects/agencyos"
+                    class="mt-5 inline-block text-lg font-medium text-orange-700 transition hover:text-orange-800"
+                >
+                    AgencyOS &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+</ProjectLayout>
